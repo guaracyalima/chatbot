@@ -12,12 +12,13 @@ namespace Bot;
 class Webhook
 {
 
-    public function check(string  $token)
+    public function check($token)
     {
         //faz a verificação do token
 
         $hubMode = filter_input(INPUT_GET, 'hub_mode');
-        $hubVerifyToken = filter_input(INPUT_GET, 'hub_verify_mode');
+
+        $hubVerifyToken = filter_input(INPUT_GET, 'hub_verify_token');
 
         if ($hubMode === 'subscribe' and $hubVerifyToken === $token)
         {

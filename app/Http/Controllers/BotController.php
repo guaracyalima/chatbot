@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Facades\Bot\Webhook;
 use Illuminate\Http\Request;
-//use Facades\Bot\Webhook;
-
 
 class BotController extends Controller
 {
