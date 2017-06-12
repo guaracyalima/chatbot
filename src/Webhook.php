@@ -24,6 +24,7 @@ class Webhook
         {
             return filter_input(INPUT_GET, 'hub_challenge');
         }
+
         return false;
 
     }
