@@ -12,5 +12,5 @@ namespace Bot\Message;
 interface MessageInterface
 {
     public function __construct($recipientId);
-    public function message($messageText);
+    public function message(string $messageText) :array;
 }

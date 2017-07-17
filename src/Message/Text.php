@@ -17,7 +17,7 @@ class Text implements MessageInterface
         $this->recipientId = $recipientId;
     }
 
-    public function message($messageText)
+    public function message(string $messageText) :array
     {
         return [
             'recipient' => [

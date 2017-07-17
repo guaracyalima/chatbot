@@ -30,13 +30,12 @@ class BotController extends Controller
         $message = $event['message']['text'];
        // $postback = $event['postback'];
 
-
         $text = new Text($senderId);
-        $text = $message->message('Ola '. $message);
+        $text = $text->message('Ola '. $message);
 
-        $callSendAPI =  new CallSendAPI(conig('botfb.pageAccessToken'));
+        $callSendAPI =  new CallSendAPI(config('botfb.pageAccessToken'));
 
-        return $callSendAPI->make($message);
+        return $callSendAPI->make($text);
 
 
     }
